@@ -1,0 +1,14 @@
+<Alloy>
+  <Window class="container">
+    <View id='navBarContainer'>
+      <View id='navBar'>
+        <View id='backButton'>
+          <ImageView id='backImage'></ImageView>
+        </View>
+        <Label id='title'>L('navBarTitle')</Label>
+        <Label id='username'></Label>
+      </View>
+    </View>
+    <View id="mainViewContainer"></View>
+  </Window>
+</Alloy>

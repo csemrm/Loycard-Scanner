@@ -1,0 +1,9 @@
+<Alloy>
+  <View class="container">
+    <ScrollView id='wrapper'>
+      <Label id='availableReduction'></Label>
+      <TextField id="reductionToUse"></TextField>
+      <Button id="button" onClick="submit"></Button>
+    </ScrollView>>
+  </View>
+</Alloy>

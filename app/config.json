@@ -1,0 +1,15 @@
+{
+	"global": {
+		"theme": "default",
+		"rootURL": "http://app.loycard.us",
+		"totalPurchasesForDiscount": 5
+	},
+	"env:development": {},
+	"env:test": {},
+	"env:production": {},
+	"os:android": {},
+	"os:blackberry": {},
+	"os:ios": {},
+	"os:mobileweb": {},
+	"dependencies": {}
+}

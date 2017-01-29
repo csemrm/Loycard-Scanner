@@ -1,0 +1,80 @@
+'.container' : {
+  top: 0,
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  backgroundColor: Alloy.CFG.theme.colors.backgroundColor
+},
+'#navBarContainer' : {
+  top: 0,
+  left: 0,
+  width: Ti.UI.FILL,
+  height: '80dp',
+  backgroundColor: Alloy.CFG.theme.colors.navBarBackgroundColor
+},
+'#navBar' : {
+  top: 0,
+  left: 0,
+  width: Ti.UI.FILL,
+  height: '80dp',
+  backgroundGradient: {
+    type: 'linear',
+    startPoint: {
+      x: '50%',
+      y: '0%'
+    },
+    endPoint: {
+      x: '50%',
+      y: '100%'
+    },
+    colors: [
+      {
+        color: Alloy.CFG.theme.colors.navBarBackgroundColor,
+        offset: 0.0
+      }, {
+        color: Alloy.CFG.theme.colors.navBarDarkerBackgroundColor,
+        offset: 1.0
+      }
+    ]
+  }
+},
+'#navBar[platform=ios]' : {
+  top: '10dp',
+},
+'#backButton' : {
+  top: '10dp',
+  left: '8dp',
+  width: '35dp',
+  height: '35dp',
+  visible: false
+},
+'#backImage' : {
+  width: '28dp',
+  height: '22dp',
+  image: '/images/backButton.png'
+},
+'#username' : {
+  top: '50dp',
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  color: Alloy.CFG.theme.colors.usernameColor,
+  font: {
+    fontSize: Alloy.CFG.theme.fonts.fontSize.titleSmall,
+    fontFamily: Alloy.CFG.theme.fonts.fontFamily.defaultBold
+  }
+},
+'#title' : {
+  top: '10dp',
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  font: {
+    fontSize: Alloy.CFG.theme.fonts.fontSize.titleBig,
+    fontFamily: Alloy.CFG.theme.fonts.fontFamily.default,
+    fontWeight: Alloy.CFG.theme.fonts.fontFamily.defaultBold
+  },
+  color: Alloy.CFG.theme.colors.navBarTitleBigColor
+},
+'#mainViewContainer' : {
+  top: '80dp',
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL
+}

@@ -1,0 +1,29 @@
+".container" : {
+  visible: false
+},
+'#wrapper' : {
+  top: 0,
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  layout: 'vertical'
+},
+'#availableReduction' : {
+  top: '10dp',
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+},
+'#reductionToUse' : {
+  top: '10dp',
+  width: '200dp',
+  height: '40dp',
+  keyboardType: Titanium.UI.KEYBOARD_DECIMAL_PAD,
+  textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+  hintText: L('enterReductionAmount')
+},
+'#button' : {
+  top: '10dp',
+  width: '250dp',
+  height: '40dp',
+  backgroundImage: '/images/login.png',
+  title: L('submit')
+}

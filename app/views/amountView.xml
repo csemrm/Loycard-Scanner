@@ -1,0 +1,13 @@
+<Alloy>
+  <View id="container" class="container">
+    <ScrollView id='amountBackground'>
+      <TextField id="amount"></TextField>
+      <View id='percentageWrapper'>
+        <TextField id="percentage"></TextField>
+        <Label id='percentageSign'></Label>
+      </View>
+      <Label id='calculatedPercentage'></Label>
+      <Button id="button" onClick="submit"></Button>
+    </ScrollView>
+  </View>
+</Alloy>
