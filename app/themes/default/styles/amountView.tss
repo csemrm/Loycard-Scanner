@@ -1,58 +1,63 @@
-'.container' : {},
-"#container" : {
-  width: Ti.UI.FILL,
-  height: Ti.UI.FILL,
-  backgroundColor: Alloy.CFG.theme.colors.backgroundColor,
-  visible: false
+'.container': {},
+"#container": {
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL,
+    backgroundColor: Alloy.CFG.theme.colors.backgroundColor,
+    visible: false
 },
-'#amountBackground' : {
-  top: 0,
-  width: Ti.UI.FILL,
-  height: Ti.UI.FILL,
-  layout: 'vertical',
-  scrollType: 'vertical'
+'#amountBackground': {
+    top: 0,
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL,
+    layout: 'vertical',
+    scrollType: 'vertical'
 },
-'#amount' : {
-  top: '10dp',
-  width: '150dp',
-  height: '40dp',
-  keyboardType: Titanium.UI.KEYBOARD_DECIMAL_PAD,
-  textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
-  hintText: L('inputAmount')
+'#amount': {
+    top: '10dp',
+    width: '150dp',
+    height: '40dp',
+    keyboardType: Titanium.UI.KEYBOARD_DECIMAL_PAD,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+    hintText: L( 'inputAmount')
 },
-'#percentageWrapper' : {
-  top: 0,
-  width: Ti.UI.SIZE,
-  height: Ti.UI.SIZE,
-  layout: 'horizontal'
+'#percentageWrapper': {
+    top: 0,
+    width: Ti.UI.SIZE,
+    height: Ti.UI.SIZE,
+    layout: 'horizontal'
 },
-'#percentage' : {
-  top: 0,
-  left: 0,
-  width: '50dp',
-  height: '40dp',
-  keyboardType: Titanium.UI.KEYBOARD_DECIMAL_PAD,
-  textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
-  value: 10
+'#percentage': {
+    top: 0,
+    left: 0,
+    width: '50dp',
+    height: '50dp',
+    keyboardType: Titanium.UI.KEYBOARD_DECIMAL_PAD,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+    value: 10
 },
-'#percentageSign' : {
-  top: 0,
-  left: 0,
-  width: Ti.UI.SIZE,
-  height: '40dp',
-  text: '%'
+'#percentageSign': {
+    top: 0,
+    left: 0,
+    width: Ti.UI.SIZE,
+    height: '40dp',
+    text: '%'
 },
-'#calculatedPercentage' : {
-  top: 0,
-  width: Ti.UI.SIZE,
-  height: Ti.UI.SIZE,
-  visible: false,
-  color: Alloy.CFG.theme.colors.defaultLabelColor
+'#calculatedPercentage': {
+    top: 0,
+    width: Ti.UI.SIZE,
+    height: Ti.UI.SIZE,
+    visible: false,
+    color: Alloy.CFG.theme.colors.defaultLabelColor
 },
-'#button' : {
-  top: '10dp',
-  width: '250dp',
-  height: '40dp',
-  backgroundImage: '/images/login.png',
-  title: L('submit')
+'#button': {
+    top: '10dp',
+    width: '250dp',
+    height: '60dp',
+    color: Alloy.CFG.theme.colors.defaultLabelColor,
+    font: {
+        fontSize: Alloy.CFG.theme.fonts.fontSize.titleMiddle,
+        fontFamily: Alloy.CFG.theme.fonts.fontFamily.default
+    },
+    backgroundImage: '/images/login.png',
+    title: L( 'submit')
 }

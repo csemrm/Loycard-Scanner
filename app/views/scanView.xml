@@ -1,5 +1,8 @@
 <Alloy>
-  <View id="container">
-    <Button id="button" onClick="scanClicked"></Button>
-  </View>
+    <View id="container">
+        <View onClick="scanClicked" id="viewcon" >
+            <ImageView id="imgicon" left="0" width="40dp"  image="/images/scanicon.png"></ImageView>
+            <Button id="button" ></Button>
+        </View>
+    </View>
 </Alloy>

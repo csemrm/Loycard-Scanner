@@ -4,41 +4,21 @@
   height: Ti.UI.FILL,
   backgroundColor: Alloy.CFG.theme.colors.backgroundColor
 },
-'#navBarContainer' : {
-  top: 0,
-  left: 0,
-  width: Ti.UI.FILL,
-  height: '80dp',
-  backgroundColor: Alloy.CFG.theme.colors.navBarBackgroundColor
+'#navBarContainer': {
+    top: 0,
+    left: 0,
+    width: Ti.UI.FILL,
+    height: '80dp',
+    backgroundColor: Alloy.CFG.theme.colors.navBarBackgroundColor
 },
-'#navBar' : {
-  top: 0,
-  left: 0,
-  width: Ti.UI.FILL,
-  height: '80dp',
-  backgroundGradient: {
-    type: 'linear',
-    startPoint: {
-      x: '50%',
-      y: '0%'
-    },
-    endPoint: {
-      x: '50%',
-      y: '100%'
-    },
-    colors: [
-      {
-        color: Alloy.CFG.theme.colors.navBarBackgroundColor,
-        offset: 0.0
-      }, {
-        color: Alloy.CFG.theme.colors.navBarDarkerBackgroundColor,
-        offset: 1.0
-      }
-    ]
-  }
+'#navBar': {
+    top: 0,
+    left: 0,
+    width: Ti.UI.FILL,
+    height: '80dp'
 },
-'#navBar[platform=ios]' : {
-  top: '10dp',
+'#navBar[platform=ios]': {
+    top: '10dp'
 },
 '#backButton' : {
   top: '10dp',

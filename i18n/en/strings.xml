@@ -1,5 +1,5 @@
 <resources>
-  <string name="navBarTitle">Title</string>
+  <string name="navBarTitle">Loycard</string>
   <string name="scan">Scan</string>
   <string name="submit">Submit</string>
   <string name="inputAmount">Enter amount...</string>

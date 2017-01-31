@@ -6,7 +6,7 @@ Alloy.Globals.mainViewContainer = $.index;
  * as main controller
  */
 var scan = Alloy.createController('scanView', {
-  changeView: changeView
+    changeView : changeView
 });
 
 /*
@@ -14,9 +14,9 @@ var scan = Alloy.createController('scanView', {
  * after successful scan
  */
 var amount = Alloy.createController('amountView', {
-  backButton: $.backButton,
-  username: $.username,
-  changeView: changeView
+    backButton : $.backButton,
+    username : $.username,
+    changeView : changeView
 });
 
 /*
@@ -24,7 +24,7 @@ var amount = Alloy.createController('amountView', {
  * after successful scan
  */
 var reduction = Alloy.createController('reductionView', {
-  changeView: changeView
+    changeView : changeView
 });
 
 //Adding the controllers to the main view controller
@@ -34,11 +34,12 @@ $.mainViewContainer.add(reduction.getView());
 
 //Back button event listener
 $.backButton.addEventListener('click', function() {
-  $.backButton.setVisible(false);
-  $.username.setVisible(false);
-  changeView('scan');
+    $.backButton.setVisible(false);
+    $.username.setVisible(false);
+    changeView('scan');
 });
-
+$.username.setVisible(true);
+$.username.setText(L('scan'));
 $.index.open();
 
 /**
@@ -61,27 +62,36 @@ $.index.open();
  *
  */
 function changeView(view, args) {
-  _.each($.mainViewContainer.getChildren(), function(e) {
-    //Ti.API.info('objects added to main view: ' + e);
-    e.setVisible(false);
-  });
-  switch (view) {
+    _.each($.mainViewContainer.getChildren(), function(e) {
+        //Ti.API.info('objects added to main view: ' + e);
+        e.setVisible(false);
+    });
+    switch (view) {
     case 'scan':
-      $.backButton.setVisible(false);
-      $.username.setVisible(false);
-      scan.getView().setVisible(true);
-      break;
+        $.backButton.setVisible(false);
+        $.username.setVisible(true);
+        $.username.setText(L('scan'));
+        scan.getView().setVisible(true);
+        break;
     case 'amount':
-      amount.init(args.clientId);
-      amount.getView().setVisible(true);
-      $.username.setVisible(true);
-      break;
+        amount.init(args.clientId);
+        amount.getView().setVisible(true);
+        $.username.setVisible(true);
+        break;
     case 'reduction':
-      $.username.setVisible(false);
-      reduction.init(args.clientId, args.reductionSum);
-      reduction.getView().setVisible(true);
-      break;
+        $.username.setVisible(false);
+        reduction.init(args.clientId, args.reductionSum);
+        reduction.getView().setVisible(true);
+        break;
     default:
-      scan.getView().setVisible(true);
-  }
+        $.username.setVisible(true);
+        $.username.setText(L('scan'));
+        scan.getView().setVisible(true);
+    }
 };
+//Hides the action bar on android
+if (OS_ANDROID) {
+    $.index.addEventListener('open', function() {
+        $.index.activity.actionBar.hide();
+    });
+}
